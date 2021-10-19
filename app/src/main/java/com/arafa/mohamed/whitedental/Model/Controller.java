@@ -1,24 +1,14 @@
 package com.arafa.mohamed.whitedental.Model;
 
-import android.content.Context;
-import android.util.Log;
+
 import android.view.View;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
-import java.util.Objects;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-
-import static android.content.ContentValues.TAG;
 
 public class Controller {
 
@@ -61,20 +51,4 @@ public class Controller {
         }
         return null;
     }
-
-    public static JSONObject readAllData() {
-        try {
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder()
-                    .url(URL+"=readAll")
-                    .build();
-            response = client.newCall(request).execute();
-            assert response.body() != null;
-            return new JSONObject(response.body().string());
-        } catch (@NonNull IOException | JSONException e) {
-            Log.e(TAG, "" + e.getLocalizedMessage());
-        }
-        return null;
-    }
-
 }
