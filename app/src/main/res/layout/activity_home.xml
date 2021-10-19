@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    tools:context=".activities.Home">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo_dental"
+
+            />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/image"
+
+        >
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/RippleStyleGrey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/search"
+                />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:layout_below="@id/card_search"
+
+        >
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/RippleStyleGrey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/register"
+                />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arafa.mohamed.whitedental">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_dental"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_dental_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.WhiteDental">
+        <activity android:name=".activities.AddDoctor" />
+        <activity android:name=".activities.FullViewImage" />
+        <activity android:name=".activities.ImagesPatients" />
+        <activity android:name=".activities.Home" />
+        <activity
+            android:name=".activities.SplashScreen"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar.StatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.VisitedData" />
+        <activity android:name=".activities.PatientDetails" />
+        <activity android:name=".activities.ViewPatientData"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+
+        <activity android:name=".activities.PatientData" />
+        <activity android:name=".activities.ForgotPassword" />
+        <activity
+            android:name=".activities.Login"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+    </application>
+
+</manifest>

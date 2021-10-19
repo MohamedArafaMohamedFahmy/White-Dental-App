@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">White Dental</string>
+
+    //Button
+
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="find_account">Find Account</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+    <string name="add_visit">Add Visit</string>
+    <string name="delete">Delete</string>
+    <string name="details">Details</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="add_doctor">Add Doctor</string>
+    <string name="update">Update</string>
+    <string name="send">Send</string>
+
+    // Text
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="first_text">First ,lets find your account</string>
+    <string name="second_text">Please enter your email</string>
+    <string name="name_patient">Patient Name</string>
+    <string name="age">Age</string>
+    <string name="phone">Phone Number</string>
+    <string name="series">Series</string>
+    <string name="address">Address</string>
+    <string name="job">Job</string>
+    <string name="chronic_diseases">Chronic Diseases</string>
+    <string name="notes">Notes</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="operation">Operation</string>
+    <string name="details_images">image of patient</string>
+    <string name="choose_doctor_name">Choose Doctor Name</string>
+    <string name="visit_number">Visit Number</string>
+    <string name="amount">Amount</string>
+    <string name="copyright_2021_white_dental">Copyright @ 2021 White Dental</string>
+    <string name="search">Search</string>
+    <string name="white_dental">White Dental</string>
+    <string name="text_amount">Amount:</string>
+    <string name="text_operation">Operation:</string>
+    <string name="search_by_name_or_phone_number">search by name or phone number</string>
+    <string name="view_patient_data">View Patient Data</string>
+    <string name="view_visits">View Visits</string>
+    <string name="images_patient">Images Patient</string>
+</resources>

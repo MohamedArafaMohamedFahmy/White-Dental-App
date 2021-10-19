@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".activities.AddDoctor">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/doctor_name_layout"
+        app:boxStrokeColor="#184967"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/doctor_name"
+        android:textColorHint="#184967"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#0a66ae"
+            android:padding="10dp"
+            android:inputType="text"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/doctor_name_layout"
+
+        >
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/RippleStyleGrey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/save"
+                />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_doctors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card_save"
+        />
+
+</RelativeLayout>

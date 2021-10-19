@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    android:background="#ffffff"
+    tools:context=".activities.Login"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="125dp"
+            android:innerRadius="0dp"
+            android:shape="oval"
+            android:thicknessRatio="0.5"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.8"
+            app:cardBackgroundColor="#ffffff"
+            >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/logo_dental"
+            android:scaleType="fitCenter"
+            />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_card_view"
+
+                >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/imageemail"
+                        app:srcCompat="@drawable/ic_email"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="15dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailAddress_layout"
+                        app:boxStrokeColor="#184967"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="@string/email_address"
+                        android:textColorHint="#184967"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imageemail"
+                        android:layout_margin="10dp"
+
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#0a66ae"
+                            android:padding="10dp"
+                            android:inputType="textEmailAddress"
+
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_progress_bar"
+                    android:elevation="8dp"
+                    android:visibility="gone"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:progressBackgroundTint="@color/white"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/imagelock"
+                        app:srcCompat="@drawable/ic_lock"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/imageemail"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/password_layout"
+                        app:boxStrokeColor="#184967"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:textColorHint="#184967"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@+id/imagelock"
+                        android:layout_below="@id/emailAddress_layout"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:textColor="#0a66ae"
+                            android:inputType="textPassword"
+
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textview_forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_password"
+                    android:textColor="#184967"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_gravity="end"
+                    android:padding="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_below="@id/password_layout"
+                    android:layout_alignParentEnd="true"
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="@color/transparent"
+            >
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                style="@style/RippleStyleGrey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/background_button"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="@string/sign_in"
+                    />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
