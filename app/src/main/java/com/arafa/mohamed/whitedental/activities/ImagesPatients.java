@@ -68,6 +68,7 @@ public class ImagesPatients extends AppCompatActivity {
                 }
                 if (!downloadImage.isEmpty()){
                     adapterImages = new MyAdapterImages(ImagesPatients.this,downloadImage,retrieveIDPatient,parentLayout);
+                    adapterImages.notifyDataSetChanged();
                     listImages.setAdapter(adapterImages);
                     listImages.setLayoutManager(new LinearLayoutManager(ImagesPatients.this));
                     rlProgressBar.setVisibility(View.GONE);
@@ -77,10 +78,7 @@ public class ImagesPatients extends AppCompatActivity {
                 if (downloadImage.isEmpty()){
                     rlProgressBar.setVisibility(View.GONE);
                     progressBar.setVisibility(View.GONE);
-                    downloadImage.clear();
-                    adapterImages = new MyAdapterImages(ImagesPatients.this,downloadImage,retrieveIDPatient,parentLayout);
-                    listImages.setAdapter(adapterImages);
-                    listImages.setLayoutManager(new LinearLayoutManager(ImagesPatients.this));
+                    adapterImages.notifyDataSetChanged();
                     Toast.makeText(ImagesPatients.this,"Not Images ",Toast.LENGTH_LONG).show();
                 }
 

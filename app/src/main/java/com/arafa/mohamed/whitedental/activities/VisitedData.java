@@ -33,6 +33,7 @@ public class VisitedData extends AppCompatActivity {
     RecyclerView listVisits;
     ArrayList<RetrievePatientsData> downloadData;
     RetrievePatientsData retrievePatientsData;
+    MyAdapterVisited adapterVisits;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,8 @@ public class VisitedData extends AppCompatActivity {
 
                 }
                 if (!downloadData.isEmpty()){
-                    MyAdapterVisited adapterVisits = new MyAdapterVisited(VisitedData.this,downloadData,parentLayout,extra.getString("series"));
+                    adapterVisits = new MyAdapterVisited(VisitedData.this,downloadData,parentLayout,extra.getString("series"));
+                    adapterVisits.notifyDataSetChanged();
                     listVisits.setAdapter(adapterVisits);
                     listVisits.setLayoutManager(new LinearLayoutManager(VisitedData.this));
                     rlProgressBar.setVisibility(View.GONE);
@@ -75,10 +77,7 @@ public class VisitedData extends AppCompatActivity {
                 if (downloadData.isEmpty()){
                     rlProgressBar.setVisibility(View.GONE);
                     progressBar.setVisibility(View.GONE);
-                    downloadData.clear();
-                    MyAdapterVisited adapterVisits = new MyAdapterVisited(VisitedData.this,downloadData,parentLayout,extra.getString("series"));
-                    listVisits.setAdapter(adapterVisits);
-                    listVisits.setLayoutManager(new LinearLayoutManager(VisitedData.this));
+                    adapterVisits.notifyDataSetChanged();
                     Toast.makeText(VisitedData.this,"Not Visits ",Toast.LENGTH_LONG).show();
                 }
 

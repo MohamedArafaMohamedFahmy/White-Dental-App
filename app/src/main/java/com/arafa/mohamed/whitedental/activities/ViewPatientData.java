@@ -122,6 +122,7 @@ public class ViewPatientData extends AppCompatActivity {
                         }
                         if (!downloadData.isEmpty()){
                             adapterPatients = new MyAdapterPatients(ViewPatientData.this,downloadData,parentLayout);
+                            adapterPatients.notifyDataSetChanged();
                             listPatient.setAdapter(adapterPatients);
                             listPatient.setLayoutManager(new LinearLayoutManager(ViewPatientData.this));
                             rlProgressBar.setVisibility(View.GONE);
@@ -130,10 +131,7 @@ public class ViewPatientData extends AppCompatActivity {
                         if (downloadData.isEmpty()){
                             rlProgressBar.setVisibility(View.GONE);
                             progressBar.setVisibility(View.GONE);
-                            downloadData.clear();
-                            adapterPatients = new MyAdapterPatients(ViewPatientData.this,downloadData,parentLayout);
-                            listPatient.setAdapter(adapterPatients);
-                            listPatient.setLayoutManager(new LinearLayoutManager(ViewPatientData.this));
+                            adapterPatients.notifyDataSetChanged();
                             Toast.makeText(ViewPatientData.this,"Not Application ",Toast.LENGTH_LONG).show();
                         }
                     }
