@@ -38,8 +38,7 @@ import java.util.concurrent.Executors;
 
 public class MyAdapterPatients extends RecyclerView.Adapter<MyAdapterPatients.MyViewHolder> implements Filterable {
     Context context;
-    ArrayList<RetrievePatientsData> downloadData;
-    ArrayList<RetrievePatientsData> dataListFilter;
+    ArrayList<RetrievePatientsData> downloadData, dataListFilter;
     ArrayList<ImagesData> downloadImage;
     DatabaseReference databaseReference;
     ImagesData imgURL;
@@ -153,7 +152,7 @@ public class MyAdapterPatients extends RecyclerView.Adapter<MyAdapterPatients.My
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             downloadData.clear();
-            downloadData.addAll((ArrayList) results.values);
+            downloadData.addAll((Collection<? extends RetrievePatientsData>) results.values);
             notifyDataSetChanged();
         }
     };

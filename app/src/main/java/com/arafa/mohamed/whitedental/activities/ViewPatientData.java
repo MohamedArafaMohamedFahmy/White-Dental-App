@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.Filter;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -179,13 +180,24 @@ public class ViewPatientData extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                if (adapterPatients != null) {
+                    adapterPatients.notifyDataSetChanged();
+                    Filter filter = adapterPatients.getFilter();
+                    if (filter != null){
+                        filter.filter(query);
+                    }
+                }
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (!newText.isEmpty()) {
-                    adapterPatients.getFilter().filter(newText);
+                if (adapterPatients != null) {
+                    adapterPatients.notifyDataSetChanged();
+                    Filter filter = adapterPatients.getFilter();
+                    if (filter != null){
+                        filter.filter(newText);
+                    }
                 }
                 return false;
             }
